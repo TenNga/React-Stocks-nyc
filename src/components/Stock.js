@@ -1,15 +1,14 @@
 import React from 'react'
 
-const Stock = () => (
-  <div>
-
-    <div className="card">
+const Stock = (props) => (
+  <div  >
+    <div onClick={() => props.renderStocks(props.stockInfo.id,props.container)} className="card">
       <div className="card-body">
         <h5 className="card-title">{
-            //Company Name
+            props.stockInfo.name
           }</h5>
         <p className="card-text">{
-            //ticker: stock price
+            props.stockInfo.ticker + " " + props.stockInfo.price
           }</p>
       </div>
     </div>
